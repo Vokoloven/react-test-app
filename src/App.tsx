@@ -1,9 +1,12 @@
-import React from "react";
+import React from 'react';
+import { Home } from 'Components/Home/Home';
+import { GlobalStyle } from 'Theme/globalStyled';
 
-
-export const App:React.FC = () => {
-
-return <h1>DOUBLE TEST TEST PAGE</h1>
-
-
-}
+export const App: React.FC = () => {
+  return (
+    <>
+      <GlobalStyle />
+      <Home />
+    </>
+  );
+};
