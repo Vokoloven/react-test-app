@@ -1,15 +1,19 @@
 {
   "files": {
     "main.css": "/react-test-app/static/css/main.e6c13ad2.css",
-    "main.js": "/react-test-app/static/js/main.fc136de3.js",
+    "main.js": "/react-test-app/static/js/main.66781bc6.js",
     "static/media/logo.svg": "/react-test-app/static/media/logo.1714ce4906e4116c6b7aad02fd3ef0e4.svg",
     "static/media/OrderSelection.svg": "/react-test-app/static/media/OrderSelection.55ff5461d47999ab368e8c6057be8eae.svg",
+    "static/media/🦆 icon _browser_.svg": "/react-test-app/static/media/🦆 icon _browser_.85e1146b1f1fede96bef0b0b877e3ffb.svg",
+    "static/media/transHeartIcon.svg": "/react-test-app/static/media/transHeartIcon.f4d9df42cad2a451530fb6bd48a1d4c2.svg",
+    "static/media/🦆 icon _pricetags outline_.svg": "/react-test-app/static/media/🦆 icon _pricetags outline_.aa4d3af9fb94abc7a59044206ace09b1.svg",
+    "static/media/readHeartIcon.svg": "/react-test-app/static/media/readHeartIcon.835f843858e6d0fa13f7abbab2ec1973.svg",
     "index.html": "/react-test-app/index.html",
     "main.e6c13ad2.css.map": "/react-test-app/static/css/main.e6c13ad2.css.map",
-    "main.fc136de3.js.map": "/react-test-app/static/js/main.fc136de3.js.map"
+    "main.66781bc6.js.map": "/react-test-app/static/js/main.66781bc6.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.fc136de3.js"
+    "static/js/main.66781bc6.js"
   ]
 }
