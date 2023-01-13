@@ -5,11 +5,13 @@ import {
   typography,
   layout,
   flexbox,
+  border,
   ColorProps,
   SpaceProps,
   TypographyProps,
   LayoutProps,
   FlexboxProps,
+  BorderProps,
 } from 'styled-system';
 
 interface IProps
@@ -17,7 +19,8 @@ interface IProps
     SpaceProps,
     TypographyProps,
     LayoutProps,
-    FlexboxProps {
+    FlexboxProps,
+    BorderProps {
   children: React.ReactNode;
 }
 
@@ -26,5 +29,6 @@ export const Box = styled('div')<IProps>(
   space,
   typography,
   layout,
-  flexbox
+  flexbox,
+  border
 );

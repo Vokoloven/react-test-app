@@ -1,19 +1,29 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { StyledInput } from './StyledInput';
-// import useDebounce from 'Helpers/debounce';
+import { useDispatch } from 'react-redux';
+import { setGameName } from 'Redux/getGameName/setGameNameSlice';
+import { useSelector } from 'react-redux';
+import { RootState } from 'Redux/store';
 
 export const Form: React.FC = () => {
-  const [value, setValue] = useState<string>('');
-  // const debouncedValue = useDebounce<string>(value, 500);
+  const inputValue = useSelector((state: RootState) => state.setGame.value);
+  const dispatch = useDispatch();
 
   const eventHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
-    e.preventDefault();
-    setValue(e.target.value);
+    dispatch(setGameName(e.target.value));
   };
 
+  const submitHandler = (e: React.FormEvent) => {
+    e.preventDefault();
+  };
+
+  // dispatch(setGameName(inputValue));
+
   return (
-    <form>
-      <StyledInput value={value} onChange={eventHandler} />
-    </form>
+    <div>
+      <form onSubmit={submitHandler}>
+        <StyledInput value={inputValue} onChange={eventHandler} />
+      </form>
+    </div>
   );
 };

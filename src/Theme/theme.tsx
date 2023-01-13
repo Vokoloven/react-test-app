@@ -5,7 +5,13 @@ interface ITheme {
   fonts: { body: string; heading: string; monospace: string };
   fontSizes: number[];
   fontWeights: { body: number; heading: number; bold: number };
-  colors: { white: string; black: string; primary: string; secondary: string };
+  colors: {
+    white: string;
+    black: string;
+    primary: string;
+    secondary: string;
+    card: string;
+  };
 }
 
 export const theme: ITheme = {
@@ -28,6 +34,7 @@ export const theme: ITheme = {
     black: '#000',
     primary: '#171A21',
     secondary: '#837F7F',
+    card: '#17323A',
   },
   //   shadows: {
   //     main: '2px 2px 2px 3px rgba(0, 0, 0, 0.2)',

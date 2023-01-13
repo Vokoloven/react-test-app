@@ -16,3 +16,13 @@ export const StyledFilterSvgIcon = styled(FilterSelectionSVG)`
   width: 37px;
   height: 36px;
 `;
+
+export const OpenedFilterButton = styled('div')`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 134px;
+  height: 53px;
+  border-radius: 10px;
+  background-color: ${p => p.theme.colors.secondary};
+`;

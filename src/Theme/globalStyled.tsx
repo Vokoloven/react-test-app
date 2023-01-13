@@ -41,6 +41,10 @@ address {
   font-style: normal;
 }
 
+a {
+  text-decoration: none;
+}
+
 
 li {
   list-style: none;
