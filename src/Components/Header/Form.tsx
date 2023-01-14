@@ -17,8 +17,6 @@ export const Form: React.FC = () => {
     e.preventDefault();
   };
 
-  // dispatch(setGameName(inputValue));
-
   return (
     <div>
       <form onSubmit={submitHandler}>
