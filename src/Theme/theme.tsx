@@ -12,6 +12,7 @@ interface ITheme {
     secondary: string;
     card: string;
     eclipse: string;
+    switcher: string;
   };
 }
 
@@ -37,5 +38,6 @@ export const theme: ITheme = {
     secondary: '#837F7F',
     card: '#17323A',
     eclipse: '#5B5E63',
+    switcher: '#ff7e15',
   },
 };

@@ -3,48 +3,44 @@ import { StyledSearchLikeList } from './StyledSearchLikeList';
 import { Box } from 'Theme/Box';
 import { setLikeButton } from 'Redux/buttonsStatus/buttonStatusSlice';
 import { useDispatch } from 'react-redux';
-
+import { useSelector } from 'react-redux';
+import { RootState } from 'Redux/store';
+import {
+  StyledSearchButton,
+  StyledLikeButton,
+} from './StyledComponents/StyledSearchLikeButton';
 import { NavLink } from 'react-router-dom';
 
 export const SearchLikeButton: React.FC = () => {
   const dispatch = useDispatch();
 
-  const toggleSearchLikeBtn = (e: React.ChangeEvent<any>) => {
-    const idSearchLikeBtn = e.target.id;
+  const { statusLikeBtn } = useSelector(
+    (state: RootState) => state.setBtnStatus
+  );
 
-    if (!idSearchLikeBtn) {
+  const defaultToggle = (btnName: string) => {
+    if (!btnName) {
       return;
     }
-    dispatch(setLikeButton(idSearchLikeBtn));
+    dispatch(setLikeButton(btnName));
   };
 
   return (
     <Box display={'flex'} flexDirection={'column'}>
       <NavLink to="/">
-        <StyledSearchLikeList onClick={toggleSearchLikeBtn}>
-          <Box
-            as={'span'}
-            size={12}
-            color={'white'}
-            id={'search'}
-            pt={'9px'}
-            pb={'9px'}
-            pl={'5px'}
+        <StyledSearchLikeList>
+          <StyledSearchButton
+            onClick={() => defaultToggle('search')}
+            className={statusLikeBtn === 'search' ? 'active' : 'inactive'}
           >
             Search
-          </Box>
-          <Box
-            as={'span'}
-            size={12}
-            color={'white'}
-            ml={11}
-            id={'like'}
-            pt={'9px'}
-            pb={'9px'}
-            pr={'5px'}
+          </StyledSearchButton>
+          <StyledLikeButton
+            onClick={() => defaultToggle('likeList')}
+            className={statusLikeBtn === 'likeList' ? 'active' : 'inactive'}
           >
             Like List
-          </Box>
+          </StyledLikeButton>
         </StyledSearchLikeList>
       </NavLink>
     </Box>
