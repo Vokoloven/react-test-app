@@ -20,7 +20,7 @@ export const StyledButtonPrice = styled('button')`
     margin-left: 13px;
   }
 
-  width: 189px;
+  min-width: 189px;
   height: 37px;
   margin-left: 13px;
   border-radius: 10px;
