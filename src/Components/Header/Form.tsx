@@ -10,7 +10,7 @@ export const Form: React.FC = () => {
   const dispatch = useDispatch();
 
   const eventHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
-    dispatch(setGameName(e.target.value));
+    dispatch(setGameName(e.target.value.trim()));
   };
 
   const submitHandler = (e: React.FormEvent) => {

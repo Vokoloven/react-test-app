@@ -2,21 +2,32 @@ import { createSlice } from '@reduxjs/toolkit';
 import type { PayloadAction } from '@reduxjs/toolkit';
 
 export interface CounterState {
-  statusLikeBtn: boolean;
+  statusLikeBtn: string;
+  statusFilterBtn: string;
+  eventButton: string;
 }
 
 const initialState: CounterState = {
-  statusLikeBtn: false,
+  statusLikeBtn: 'search',
+  statusFilterBtn: '',
+  eventButton: '',
 };
 
 export const setButtonStatusSlice = createSlice({
   name: 'buttonStatusChanger',
   initialState,
   reducers: {
-    setLikeButton: (state, action: PayloadAction<boolean>) => {
-      state.statusLikeBtn = !action.payload;
+    setLikeButton: (state, action: PayloadAction<string>) => {
+      state.statusLikeBtn = action.payload;
+    },
+    setFilterButton: (state, action: PayloadAction<string>) => {
+      state.statusFilterBtn = action.payload;
+    },
+    setEventButton: (state, action: PayloadAction<string>) => {
+      state.eventButton = action.payload;
     },
   },
 });
 
-export const { setLikeButton } = setButtonStatusSlice.actions;
+export const { setLikeButton, setFilterButton, setEventButton } =
+  setButtonStatusSlice.actions;

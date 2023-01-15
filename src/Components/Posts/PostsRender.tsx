@@ -7,16 +7,12 @@ import { RootState } from 'Redux/store';
 import { GetPost } from './GetPost';
 import { GetFilterPost } from './GetFilterPost';
 
-import { useDispatch } from 'react-redux';
-import { setGameId } from 'Redux/idGame/getIdGameSlice';
-
 export const PostRender: React.FC<IArrItem> = ({ props }): any => {
   const [likeList, setLikeList] = useState<IItem[]>(() => {
     const storedValues = localStorage.getItem('likeList');
     return storedValues ? JSON.parse(storedValues) : [];
   });
   const isFirstRender = useRef<boolean>(true);
-  const dispatch = useDispatch();
 
   useEffect(() => {
     if (isFirstRender.current) {
@@ -50,15 +46,9 @@ export const PostRender: React.FC<IArrItem> = ({ props }): any => {
     }
   };
 
-  const idHandler = (e: React.ChangeEvent<any>) => {
-    const id = e.currentTarget.id;
-
-    dispatch(setGameId(id));
-  };
-
-  return !likeButtonStatus ? (
+  return likeButtonStatus === 'search' ? (
     <GetPost props={props} favorite={likeList} func={eventToggler} />
   ) : (
-    <GetFilterPost props={likeList} func={eventToggler} idHandler={idHandler} />
+    <GetFilterPost props={likeList} func={eventToggler} />
   );
 };

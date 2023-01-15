@@ -3,6 +3,22 @@ import { ReactComponent as BrowserIcon } from 'Image/🦆 icon _browser_.svg';
 import { ReactComponent as PriceTags } from 'Image/🦆 icon _pricetags outline_.svg';
 
 export const StyledButtonPrice = styled('button')`
+  @media screen and (max-width: 1200px) {
+    width: 100px;
+    height: 37px;
+    margin-left: 13px;
+  }
+  @media screen and (max-width: 1024px) {
+    width: 100px;
+    height: 37px;
+    margin-left: 13px;
+  }
+  @media screen and (max-width: 768px) {
+    width: 262px;
+    height: 30px;
+    margin-left: 0px;
+  }
+
   width: 189px;
   height: 37px;
   margin-left: 13px;
@@ -32,4 +48,27 @@ export const StyledBrowserIcon = styled(BrowserIcon)`
 export const StyledPriceTags = styled(PriceTags)`
   width: 25px;
   height: 25px;
+`;
+
+export const StyledParagraphPrice = styled('p')`
+  display: flex;
+  justify-content: space-between;
+
+  color: ${p => p.theme.colors.white};
+  margin-right: 18px;
+  margin-left: 18px;
+  padding-top: 10px;
+  cursor: pointer;
+`;
+
+export const StyledParagraphDate = styled('p')`
+  display: flex;
+  justify-content: space-between;
+
+  color: ${p => p.theme.colors.white};
+  font-size: 12;
+  margin-right: 18px;
+  margin-left: 18px;
+  padding-bottom: 4px;
+  cursor: pointer;
 `;

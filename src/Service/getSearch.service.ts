@@ -2,19 +2,27 @@ import { configAxios } from './configAxios';
 
 interface IParams {
   search: string;
-  page: string;
+  page: number;
 }
 
 export const searchGameByName = async (params: IParams) => {
-  const { data } = await configAxios.get(
-    `/search/${params.search}/page/${params.page}`
-  );
+  try {
+    const { data } = await configAxios.get(
+      `/search/${params.search}/page/${params.page}`
+    );
 
-  return data;
+    return data;
+  } catch (error) {
+    console.log(error);
+  }
 };
 
-export const gameDetails = async (id: string) => {
-  const { data } = await configAxios.get(`/appDetail/${id}`);
+export const fetchGameDetails = async (id: string) => {
+  try {
+    const { data } = await configAxios.get(`/appDetail/${id}`);
 
-  return data;
+    return data;
+  } catch (error) {
+    console.log(error);
+  }
 };

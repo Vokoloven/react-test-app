@@ -5,10 +5,20 @@ export const StyledInput = styled.input.attrs({
   id: 'input',
   placeholder: 'Enter an app name...',
 })`
-  /* @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 1200px) {
     width: 306px;
-    height: 31px;
-  } */
+    height: 37px;
+  }
+
+  @media screen and (max-width: 1024px) {
+    width: 306px;
+    height: 37px;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 306px;
+    max-height: 30px;
+  }
 
   position: relative;
   width: 602px;

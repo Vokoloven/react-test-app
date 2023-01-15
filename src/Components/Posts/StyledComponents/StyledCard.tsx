@@ -4,6 +4,7 @@ export const StyledBox = styled('div')`
   display: flex;
   flex-wrap: wrap;
   margin-top: 58px;
+  margin-bottom: 58px;
   gap: 20px;
 `;
 

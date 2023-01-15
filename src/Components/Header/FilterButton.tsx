@@ -4,13 +4,27 @@ import {
   StyledFilterButton,
   StyledFilterSvgIcon,
   OpenedFilterButton,
+  StyledParagraph,
 } from './StyledComponents/StyledFilterButton';
 
+import { setFilterButton } from 'Redux/buttonsStatus/buttonStatusSlice';
+import { useDispatch } from 'react-redux';
+
 export const FilterButton: React.FC = () => {
+  const dispatch = useDispatch();
   const [filterButtonList, setFilterButtonShown] = useState<boolean>(false);
 
   const toggleHandlerLikeList = (e: React.ChangeEvent<any>) => {
     setFilterButtonShown(!filterButtonList);
+  };
+
+  const changeFilterPrice = (e: React.ChangeEvent<any>) => {
+    const idFilter = e.target.id;
+
+    if (!idFilter) {
+      return;
+    }
+    dispatch(setFilterButton(idFilter));
   };
 
   return (
@@ -19,25 +33,9 @@ export const FilterButton: React.FC = () => {
         <StyledFilterSvgIcon />
       </StyledFilterButton>
       {filterButtonList && (
-        <OpenedFilterButton>
-          <Box
-            as={'a'}
-            color="white"
-            href="http://google.com"
-            ml={'auto'}
-            mr={'auto'}
-          >
-            Lower to bigger
-          </Box>
-          <Box
-            as={'a'}
-            color="white"
-            href="http://google.com"
-            ml={'auto'}
-            mr={'auto'}
-          >
-            Bigger to lower
-          </Box>
+        <OpenedFilterButton onClick={changeFilterPrice}>
+          <StyledParagraph id={'lower'}>Lower to bigger</StyledParagraph>
+          <StyledParagraph id={'bigger'}>Bigger to lower</StyledParagraph>
         </OpenedFilterButton>
       )}
     </Box>

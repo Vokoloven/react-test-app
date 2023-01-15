@@ -11,6 +11,7 @@ interface ITheme {
     primary: string;
     secondary: string;
     card: string;
+    eclipse: string;
   };
 }
 
@@ -35,8 +36,6 @@ export const theme: ITheme = {
     primary: '#171A21',
     secondary: '#837F7F',
     card: '#17323A',
+    eclipse: '#5B5E63',
   },
-  //   shadows: {
-  //     main: '2px 2px 2px 3px rgba(0, 0, 0, 0.2)',
-  //   },
 };
