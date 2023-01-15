@@ -6,6 +6,7 @@ export const StyledBox = styled('div')`
   margin-top: 58px;
   margin-bottom: 58px;
   gap: 20px;
+  justify-content: center;
 `;
 
 export const StyledCard = styled('div')`
