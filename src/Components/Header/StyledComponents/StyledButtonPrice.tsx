@@ -3,20 +3,21 @@ import { ReactComponent as BrowserIcon } from 'Image/🦆 icon _browser_.svg';
 import { ReactComponent as PriceTags } from 'Image/🦆 icon _pricetags outline_.svg';
 
 export const StyledButtonPrice = styled('button')`
-  @media screen and (max-width: 1200px) {
-    width: 100px;
-    height: 37px;
-    margin-left: 13px;
-  }
-  @media screen and (max-width: 1024px) {
-    width: 100px;
-    height: 37px;
-    margin-left: 13px;
-  }
-  @media screen and (max-width: 768px) {
+  @media (min-width: 320px) and (max-width: 767px) {
     width: 262px;
-    height: 30px;
+    max-height: 30px;
     margin-left: 0px;
+  }
+
+  @media (min-width: 767px) and (max-width: 1023px) {
+    width: 100px;
+    height: 37px;
+    margin-left: 13px;
+  }
+  @media screen and (min-width: 1024px) {
+    width: 100px;
+    height: 37px;
+    margin-left: 13px;
   }
 
   width: 189px;

@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 
 export const StyledSearchLikeList = styled('button')`
-  @media screen and (max-width: 1200px) {
-    width: 100px;
-    height: 37px;
-  }
-  @media screen and (max-width: 768px) {
+  @media (min-width: 320px) and (max-width: 767px) {
     min-width: 134px;
+    max-height: 30px;
+  }
+  @media (min-width: 767px) and (max-width: 1023px) {
+    width: 100px;
     height: 37px;
   }
 

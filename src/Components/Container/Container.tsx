@@ -6,15 +6,16 @@ export const Container = styled('div')`
   padding-right: 15px;
   margin: 0 auto;
 
-  @media screen and (min-width: 1200px) {
-    max-width: 1200px;
-  }
-  @media screen and (min-width: 768px) {
-    max-width: 768px;
-  }
   @media screen and (min-width: 320px) {
     max-width: 320px;
     padding-left: 25px;
     padding-right: 29px;
+  }
+
+  @media screen and (min-width: 768px) {
+    max-width: 768px;
+  }
+
+  @media screen and (min-width: 1200px) {
   }
 `;

@@ -3,11 +3,12 @@ import styled from 'styled-components';
 import { ReactComponent as FilterSelectionSVG } from 'Image/OrderSelection.svg';
 
 export const StyledFilterButton = styled('button')`
-  @media screen and (max-width: 1024px) {
+  @media (min-width: 320px) and (max-width: 767px) {
     max-width: 33px;
     max-height: 30px;
   }
-  @media screen and (max-width: 768px) {
+
+  @media (min-width: 767px) and (max-width: 1023px) {
     max-width: 33px;
     max-height: 30px;
   }
@@ -22,13 +23,13 @@ export const StyledFilterButton = styled('button')`
 `;
 
 export const StyledFilterSvgIcon = styled(FilterSelectionSVG)`
-  @media screen and (max-width: 1024px) {
-    max-width: 37px;
-    max-height: 36px;
-  }
-  @media screen and (max-width: 768px) {
+  @media (min-width: 320px) and (max-width: 767px) {
     width: 33px;
     max-height: 30px;
+  }
+  @media (min-width: 767px) and (max-width: 1023px) {
+    max-width: 37px;
+    max-height: 36px;
   }
 
   max-width: 37px;

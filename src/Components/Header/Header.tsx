@@ -1,5 +1,5 @@
 import React from 'react';
-import { ReactComponent as ReactLogo } from 'Image/logo.svg';
+import { ReactComponent as Logo } from 'Image/logo.svg';
 import { Form } from './Form';
 import { Box } from 'Theme/Box';
 
@@ -20,7 +20,9 @@ export const Header: React.FC = () => {
     <>
       {screenResolution === 'desktop' && (
         <StyledHeaderBox>
-          <ReactLogo />
+          <Box minWidth={'150px'}>
+            <Logo />
+          </Box>
           <Form />
           <FilterButton />
           <ButtonPrice />
@@ -29,7 +31,7 @@ export const Header: React.FC = () => {
       )}
       {screenResolution === 'tablet' && (
         <StyledHeaderBox>
-          <ReactLogo />
+          <Logo />
           <Form />
           <FilterButton />
           <ButtonPrice />
@@ -39,7 +41,9 @@ export const Header: React.FC = () => {
       {screenResolution === 'mobile' && (
         <StyledHeaderBox>
           <Box display={'flex'} mb={'7px'}>
-            <ReactLogo />
+            <Box minWidth={'144px'}>
+              <Logo />
+            </Box>
             <SearchLikeButton />
           </Box>
           <Box mb={'8px'}>
