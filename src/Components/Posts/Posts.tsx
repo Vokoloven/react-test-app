@@ -13,7 +13,7 @@ import {
 import { SpinnerCircular } from 'spinners-react';
 import { Box } from 'Theme/Box';
 
-export const Posts: React.FC = () => {
+const Posts: React.FC = () => {
   const [gamePost, setGamePost] = useState<IItem[]>([]);
   const dispatch = useDispatch();
   const inputValue = useSelector((state: RootState) => state.setGame.value);
@@ -79,3 +79,5 @@ export const Posts: React.FC = () => {
     </Box>
   );
 };
+
+export default Posts;

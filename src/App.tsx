@@ -3,9 +3,16 @@ import { Home } from 'Components/Home/Home';
 import { GlobalStyle } from 'Theme/globalStyled';
 import { Routes, Route } from 'react-router';
 import { Container } from 'Components/Container/Container';
-import { Posts } from 'Components/Posts/Posts';
-import { GameDatails } from 'Components/AppDetails/GameDatails';
+
 import { NotFound } from 'Components/NotFound/NotFound';
+import { lazy } from 'react';
+
+const lazyLoading = (path: string) => {
+  return lazy(() => import(`${path}`));
+};
+
+const Posts = lazyLoading('Components/Posts/Posts');
+const GameDatails = lazyLoading('Components/AppDetails/GameDatails');
 
 export const App: React.FC = () => {
   return (

@@ -8,7 +8,7 @@ import { isLoadedStatus } from 'Redux/Pagination/paginationSlice';
 import { SpinnerCircular } from 'spinners-react';
 import { RootState } from 'Redux/store';
 
-export const GameDatails: React.FC = () => {
+const GameDatails: React.FC = () => {
   const [gameDetails, setGameDetails] = useState<Partial<IAppDetails>>({});
   const { detailsId } = useParams();
   const { isLoaded } = useSelector(
@@ -65,3 +65,5 @@ export const GameDatails: React.FC = () => {
     </Box>
   );
 };
+
+export default GameDatails;
