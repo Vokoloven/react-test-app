@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkreact_test_app=self.webpackChunkreact_test_app||[]).push([[894],{6894:function(e,t,s){e.exports=s.p+"static/media/logo.1714ce4906e4116c6b7a.svg"}}]);

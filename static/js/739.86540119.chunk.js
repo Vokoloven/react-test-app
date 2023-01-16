@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkreact_test_app=self.webpackChunkreact_test_app||[]).push([[739],{4739:function(e,t,s){e.exports=s.p+"static/media/OrderSelection.55ff5461d47999ab368e.svg"}}]);

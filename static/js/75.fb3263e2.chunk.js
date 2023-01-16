@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkreact_test_app=self.webpackChunkreact_test_app||[]).push([[75],{6075:function(a,t,e){a.exports=e.p+"static/media/\ud83e\udd86 icon _pricetags outline_.aa4d3af9fb94abc7a590.svg"}}]);

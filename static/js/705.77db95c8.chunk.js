@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkreact_test_app=self.webpackChunkreact_test_app||[]).push([[705],{6705:function(t,a,e){t.exports=e.p+"static/media/transHeartIcon.f4d9df42cad2a451530f.svg"}}]);

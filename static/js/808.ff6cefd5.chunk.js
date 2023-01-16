@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkreact_test_app=self.webpackChunkreact_test_app||[]).push([[808],{808:function(e,t,a){e.exports=a.p+"static/media/\ud83e\udd86 icon _search_.080f6006152a3405ba68.svg"}}]);

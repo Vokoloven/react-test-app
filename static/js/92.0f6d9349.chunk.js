@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkreact_test_app=self.webpackChunkreact_test_app||[]).push([[92],{9092:function(e,t,a){e.exports=a.p+"static/media/readHeartIcon.835f843858e6d0fa13f7.svg"}}]);
