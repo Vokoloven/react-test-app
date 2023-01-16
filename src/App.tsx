@@ -14,8 +14,6 @@ const lazyLoading = (path: string) => {
 const Posts = lazyLoading('Components/Posts/Posts');
 const GameDatails = lazyLoading('Components/AppDetails/GameDatails');
 
-console.log(Posts);
-
 export const App: React.FC = () => {
   return (
     <>
