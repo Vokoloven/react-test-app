@@ -26,6 +26,7 @@ export const Pagination: React.FC = () => {
   const { isResponse } = useSelector(
     (state: RootState) => state.setPaginationStatus
   );
+
   const inputValue = useSelector((state: RootState) => state.setGame.value);
 
   const handlerCurrentPage = (page: number): void => {
@@ -37,12 +38,20 @@ export const Pagination: React.FC = () => {
       return;
     }
 
+    if (!isResponse) {
+      setFirstPage(() => 1);
+    }
+
     setFirstPage(() => firstPage + 1);
     setLastPage(() => lastPage + 1);
     setCurrentPage(lastPage + 1);
   };
 
   const decrementPage = (): void => {
+    if (!isResponse) {
+      setFirstPage(() => 3);
+    }
+
     if (firstPage > 1) {
       setFirstPage(() => firstPage - 1);
       setLastPage(() => lastPage - 1);

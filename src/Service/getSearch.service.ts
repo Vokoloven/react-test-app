@@ -12,8 +12,8 @@ export const searchGameByName = async (params: IParams) => {
     );
 
     return data;
-  } catch (error) {
-    console.log(error);
+  } catch (error: any) {
+    console.log(error.message);
   }
 };
 
@@ -22,7 +22,7 @@ export const fetchGameDetails = async (id: string) => {
     const { data } = await configAxios.get(`/appDetail/${id}`);
 
     return data;
-  } catch (error) {
-    console.log(error);
+  } catch (error: any) {
+    console.log(error.message);
   }
 };

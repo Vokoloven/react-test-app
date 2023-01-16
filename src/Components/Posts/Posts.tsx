@@ -47,6 +47,7 @@ export const Posts: React.FC = () => {
     const getApiData = async (params: IParams) => {
       dispatch(isLoadedStatus(false));
       const data = await searchGameByName(params);
+
       if (data.length === 0) {
         dispatch(isResponeStatus(true));
       } else {
