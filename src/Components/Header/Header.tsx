@@ -2,6 +2,7 @@ import React from 'react';
 import { ReactComponent as Logo } from 'Image/logo.svg';
 import { Form } from './Form';
 import { Box } from 'Theme/Box';
+import { NavLink } from 'react-router-dom';
 
 import { ButtonPrice } from './PriceButton';
 import { FilterButton } from './FilterButton';
@@ -21,7 +22,9 @@ export const Header: React.FC = () => {
       {screenResolution === 'desktop' && (
         <StyledHeaderBox>
           <Box minWidth={'150px'}>
-            <Logo />
+            <NavLink to={'/'}>
+              <Logo />
+            </NavLink>
           </Box>
           <Form />
           <FilterButton />
@@ -31,7 +34,9 @@ export const Header: React.FC = () => {
       )}
       {screenResolution === 'tablet' && (
         <StyledHeaderBox>
-          <Logo />
+          <NavLink to={'/'}>
+            <Logo />
+          </NavLink>
           <Form />
           <FilterButton />
           <ButtonPrice />
@@ -42,7 +47,9 @@ export const Header: React.FC = () => {
         <StyledHeaderBox>
           <Box display={'flex'} mb={'7px'}>
             <Box minWidth={'144px'}>
-              <Logo />
+              <NavLink to={'/'}>
+                <Logo />
+              </NavLink>
             </Box>
             <SearchLikeButton />
           </Box>

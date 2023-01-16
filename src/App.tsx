@@ -8,11 +8,13 @@ import { NotFound } from 'Components/NotFound/NotFound';
 import { lazy } from 'react';
 
 const lazyLoading = (path: string) => {
-  return lazy(() => import(`${path}`));
+  return lazy(() => import(`${path}`).then());
 };
 
 const Posts = lazyLoading('Components/Posts/Posts');
 const GameDatails = lazyLoading('Components/AppDetails/GameDatails');
+
+console.log(Posts);
 
 export const App: React.FC = () => {
   return (
@@ -21,7 +23,7 @@ export const App: React.FC = () => {
       <Container>
         <Routes>
           <Route path="/" element={<Home />}>
-            <Route path="/" element={<Posts />} />
+            <Route index element={<Posts />} />
             <Route path="details/:detailsId" element={<GameDatails />} />
           </Route>
           <Route path="*" element={<NotFound />} />
